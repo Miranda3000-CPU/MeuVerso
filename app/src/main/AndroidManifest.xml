@@ -7,11 +7,10 @@
 		android:allowBackup="true"
 		android:icon="@drawable/logo_app"
 		android:label="@string/app_name"
-		android:requestLegacyExternalStorage="true"
-		android:usesCleartextTraffic="true"
+		android:usesCleartextTraffic="false"
 		android:theme="@style/AppTheme">
 		<receiver android:name=".NotificationReceiver"
-		android:exported="true"/>
+		android:exported="false"/>
 		<activity
 			android:name=".MainActivity"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
@@ -24,10 +23,7 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity
-			android:name=".DebugActivity"
-			android:screenOrientation="portrait"
-			android:theme="@style/AppTheme.DebugActivity" />
+
 		<provider
 			android:name="androidx.startup.InitializationProvider"
 			android:authorities="com.meu.verso.jeiel.androidx-startup"
@@ -39,8 +35,6 @@
 				android:name="androidx.emoji2.text.EmojiCompatInitializer"
 				android:value="androidx.startup" />
 		</provider>
-		<uses-library
-			android:name="org.apache.http.legacy"
-			android:required="false" />
+
 	</application>
 </manifest>

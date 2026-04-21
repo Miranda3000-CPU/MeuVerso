@@ -5,8 +5,7 @@ plugins {
 android {
 	compileSdk 34
 	
-	useLibrary 'org.apache.http.legacy'
-	
+
 	defaultConfig {
 		applicationId "com.meu.verso.jeiel"
 		namespace "com.meu.verso.jeiel"
